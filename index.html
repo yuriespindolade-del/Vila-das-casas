@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vila das Casas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>🏘️ Vila das Casas</h1>
+  <div class="sub">Construa casas, cadastre moradores e arraste cada um para a sua casa. Tudo é salvo sozinho.</div>
+</header>
+
+<div class="forms">
+  <div class="box">
+    <h2>🏠 Nova casa</h2>
+    <div class="row">
+      <input type="text" id="dono" placeholder="Nome do dono" maxlength="40">
+      <input type="number" id="vagas" min="1" max="50" value="4" title="Vagas">
+      <button class="p" id="addCasa">Construir</button>
+    </div>
+  </div>
+  <div class="box">
+    <h2>🧑 Novo membro</h2>
+    <div class="row">
+      <input type="text" id="nome" placeholder="Nome do membro" maxlength="40">
+      <input type="file" id="foto" accept="image/*">
+      <button class="p" id="addMembro">Adicionar</button>
+    </div>
+  </div>
+</div>
+
+<div class="box">
+  <h2>🚶 Membros sem casa (<span id="qtdLivres">0</span>)</h2>
+  <div class="pool zone" id="livres" data-casa=""></div>
+</div>
+
+<div class="houses" id="casas"></div>
+<div class="grass">🌳 🌷 🌳 🌼 🌳</div>
+<div class="tools"><button id="limpar">Apagar tudo</button></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
